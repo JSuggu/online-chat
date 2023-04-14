@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <link rel="icon" href="#"/>
+</head>
+<body class="flex">
+    <span id="room" class="fixed w-1/12 h-20 pt-6 bg-slate-300 text-black text-center align-middle font-bold border-r-2 border-gray-500 z-20">
+
+    </span>
+    <div id="users" class="flex fixed flex-col items-start w-1/12 h-screen p-8 pt-20 border-r-2 border-gray-500 bg-white z-10">
+
+    </div>
+    <div id="users-space" class="flex w-1/12">
+
+    </div>
+    <div id="chat" class="flex flex-col px-6 w-11/12">
+      <ul id="messages" class="list-none m-0 z-0"></ul>
+      <form id="form" action="" class="flex h-12 p-1 fixed bottom-0 left-0 right-0 bg-slate-300 z-20 box-border backdrop-blur-md">
+        <input id="input" autocomplete="off" class="border-none p-1 flex-grow rounded-3xl m-1 focus:outline-none"/>
+        <button class="w-20 bg-slate-400 border-none p-0.5 m-1 rounded outline-none text-black">Send</button>
+      </form>
+    </div>
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+    <script src="../utils/room.js"></script>
+</body>
+</html>

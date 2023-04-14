@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="#"/>
+</head>
+<body class="min-h-screen grid place-content-center bg-slate-50 gap-10 ">
+    <span class="text-center text-4xl font-bold m-0 tracking-widest">ONLINE CHAT</span>
+    <div id="connection-buttons" class="flex flex-col gap-5">
+        <section id="name-container" class="flex gap-3">
+            <label for="name">Nickname: </label>
+            <input type="text" name="name" id="nickname" class="w-full p-0.5 bg-slate-200 shadow-inner">
+        </section>
+        <section id="buttons" class="flex flex-auto gap-5">
+            <button id="create-room" value="create" class="px-8 py-2 bg-cyan-400 rounded-3xl drop-shadow-md">Create Room</button>
+            <button id="join-room" value="join" class="px-8 py-2 bg-cyan-400 rounded-3xl drop-shadow-md">Join Room</button>
+        </section>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
