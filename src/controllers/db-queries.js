@@ -1,6 +1,6 @@
 import { pool } from "../model/connection.js";
 import codeGenerator from "./codeGenerator.js";
-import { __dirname } from "../app.js";
+import { __dirname } from "../index.js";
 
 const queries = {
 

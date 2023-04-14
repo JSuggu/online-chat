@@ -5,6 +5,7 @@ import path from "path";
 import { fileURLToPath } from 'url';
 import {router}  from "./routes/routes.js";
 import { queries } from "./controllers/db-queries.js";
+import rooms from "./model/rooms.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
