@@ -4,7 +4,7 @@ import { __dirname } from "../app.js";
 
 const queries = {
 
-    addRoom: function(req, res){
+    addRoom: function(_, res){
         const roomCode = codeGenerator();
 
         pool.query("INSERT INTO rooms SET ?", {room_name: roomCode, user_amount: 0}, (err, result) => {
@@ -15,7 +15,7 @@ const queries = {
         });
     },
 
-    getRooms: function(req, res){
+    getRooms: function(_, res){
 
         pool.query("SELECT * FROM rooms", (err, result) => {
             if(err)
@@ -61,14 +61,14 @@ const queries = {
 
             pool.query("UPDATE rooms SET user_amount = ? WHERE id = ?", [userAmount-1, roomId], (err, result) => {
                 if(err)
-                return {err}
+                    return {err}
                 
             });
 
-            if(userAmount == 1 && roomName != "public"){
+            if(userAmount <= 1){
                 pool.query("DELETE FROM rooms WHERE id = ?", [roomId], (err2, result2) => {
                     if(err2)
-                    return {err: err2}
+                        return {err: err2}
                 });
             }
 
