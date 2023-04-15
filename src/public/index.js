@@ -1,4 +1,4 @@
-const urlDomain = "http://localhost:3000";
+const urlDomain = "https://chat-online-2mk6.onrender.com"//"http://localhost:3000";
 const createButton = document.querySelector("#create-room");
 const joinButton = document.querySelector("#join-room");
 const nickName = document.querySelector("#nickname");

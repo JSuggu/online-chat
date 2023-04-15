@@ -1,4 +1,4 @@
-const urlDomain = "http://localhost:3000";
+const urlDomain = "https://chat-online-2mk6.onrender.com"//"http://localhost:3000";
 const socket = io(urlDomain, {autoConnect:false});
 
 var form = document.getElementById('form');
