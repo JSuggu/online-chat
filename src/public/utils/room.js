@@ -1,4 +1,5 @@
-const socket = io("http://localhost:3000", {autoConnect:false});
+const urlDomain = "http://localhost:3000";
+const socket = io(urlDomain, {autoConnect:false});
 
 var form = document.getElementById('form');
 var input = document.getElementById('input');
@@ -9,7 +10,7 @@ const username = sessionStorage.getItem("username");
 const roomChosen = sessionStorage.getItem("room");
 
 if(!username){
-    window.location.href = "http://localhost:3000";
+    window.location.href = urlDomain;
 }
 
 socket.auth = { username: username, room: roomChosen };

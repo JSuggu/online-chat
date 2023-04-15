@@ -12,7 +12,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "public")))
+app.use(express.static(path.join(__dirname, "public")));
 
 //CORS
 app.use((req, res, next) => {
@@ -28,8 +28,8 @@ const io = new WebSocketServer(server);
 
 app.use("/", router);
 
-server.listen(3000, () => {
-    console.log("server running port 3000");
+server.listen(process.env.PORT || 3000, () => {
+    console.log("server running");
 });
 
 
