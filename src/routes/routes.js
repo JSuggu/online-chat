@@ -1,6 +1,6 @@
 import express from "express";
 import { queries } from "../controllers/db-queries.js";
-import { __dirname } from "../index.js";
+import { __dirname } from "../app.js";
 
 const router = express.Router();
 

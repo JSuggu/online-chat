@@ -1,14 +1,12 @@
 import mysql from "mysql2";
 
 const pool = mysql.createPool({
-    host: "aws.connect.psdb.cloud", //"localhost",
-    user: "33kic29udivcjyty1ph8", //"root",
-    password: "pscale_pw_OufGrJ2tuG4ngCFejWX6Uq1cnWamZNU8Ap56bAwitJQ", //"41100188",
-    database: "chat_rooms", //"rooms_chat",
+    host: "bydgh4rh3pb5izxeujmg-mysql.services.clever-cloud.com", //"localhost",
+    user: "urffllvzo2cxkaci", //"root",
+    password: "bFTS6dxXVD8OSpOrKXqY", //"41100188",
+    database: "bydgh4rh3pb5izxeujmg", //"rooms_chat",
+    port: "3306",
     connectionLimit: 10,
-    ssl: {
-        rejectUnauthorized: true
-    }
 });
 
 export {pool};
